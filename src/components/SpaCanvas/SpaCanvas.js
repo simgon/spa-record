@@ -187,19 +187,6 @@ export default function CustomCanvas({ record, onUpdateRecord = (f) => f }) {
         <button onClick={() => setScale(scale > 0.2 ? scale * 0.9 : scale)}>-</button>
         <button onClick={() => sendToFrontOrBack(true)}>最前面</button>
         <button onClick={() => sendToFrontOrBack(false)}>最背面</button>
-
-        {/* 図形テキスト編集 */}
-        <input
-          type="text"
-          value={shapes.find((shape) => shape.id === selectedShapeId)?.text ?? ""}
-          onChange={(e) => {
-            const newShapes = shapes.slice();
-            const selectedShape = newShapes.find((shape) => shape.id === selectedShapeId);
-            selectedShape.text = e.target.value;
-            setShapes(newShapes);
-          }}
-          disabled={!selectedShapeId}
-        />
       </>
     );
   };
@@ -210,6 +197,19 @@ export default function CustomCanvas({ record, onUpdateRecord = (f) => f }) {
 
       {/* 操作ボタン */}
       <OperationComponent />
+
+      {/* 図形テキスト編集 */}
+      <input
+        type="text"
+        value={shapes.find((shape) => shape.id === selectedShapeId)?.text ?? ""}
+        onChange={(e) => {
+          const newShapes = shapes.slice();
+          const selectedShape = newShapes.find((shape) => shape.id === selectedShapeId);
+          selectedShape.text = e.target.value;
+          setShapes(newShapes);
+        }}
+        disabled={!selectedShapeId}
+      />
 
       {/* キャンバス */}
       <Stage
