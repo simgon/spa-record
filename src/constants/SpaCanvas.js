@@ -11,6 +11,7 @@ export const SHAPE_TYPE = {
   TSUBOYU: "tsuboyu",
   CHAIR: "chair",
   TEXT: "text",
+  WALK: "walk",
 };
 
 export const ALL_TYPE = {
@@ -30,6 +31,7 @@ export const SHAPE_TYPE_TEXT = {
   [SHAPE_TYPE.TSUBOYU]: "",
   [SHAPE_TYPE.CHAIR]: "",
   [SHAPE_TYPE.TEXT]: "テキスト",
+  [SHAPE_TYPE.WALK]: "",
 };
 
 export const SHAPE_COLOR = {

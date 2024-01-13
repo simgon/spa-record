@@ -5,7 +5,7 @@ import { SHAPE_TYPE, SHAPE_TYPE_TEXT, ALL_TYPE, MIN_SIZE_SHAPE } from "../../con
 import GridPaper from "./GridPaper";
 import Shape from "./Shape";
 
-export default function CustomCanvas({ record, onUpdateRecord = (f) => f }) {
+export default function SpaCanvas({ record, onUpdateRecord = (f) => f }) {
   const [shapes, setShapes] = React.useState(record.canvas ?? []);
   const [selectedOperation, setSelectedOperation] = useState(ALL_TYPE.SELECTION);
   const [selectedShapeId, setSelectedShapeId] = useState(null);
@@ -167,6 +167,7 @@ export default function CustomCanvas({ record, onUpdateRecord = (f) => f }) {
       [SHAPE_TYPE.CHAIR]: "椅子",
       [SHAPE_TYPE.TREE]: "木",
       [SHAPE_TYPE.TEXT]: "テキスト",
+      [SHAPE_TYPE.WALK]: "石畳",
     };
 
     return (

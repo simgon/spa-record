@@ -13,6 +13,7 @@ export default function Shape({ shapeProps, isSelected, onSelect, onChange }) {
     [SHAPE_TYPE.TREE]: useImage("/img/tree.png"),
     [SHAPE_TYPE.TSUBOYU]: useImage("/img/tsuboyu.png"),
     [SHAPE_TYPE.CHAIR]: useImage("/img/chair.png"),
+    [SHAPE_TYPE.WALK]: useImage("/img/stone.png"),
   };
 
   React.useEffect(() => {

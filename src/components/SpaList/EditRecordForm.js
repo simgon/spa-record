@@ -1,7 +1,7 @@
 import React from "react";
 import SpaRating from "./SpaRating";
 import GoogleMap from "./GoogleMap";
-import CustomCanvas from "../SpaCanvas/SpaCanvas";
+import SpaCanvas from "../SpaCanvas/SpaCanvas";
 
 // 子コンポーネント（Title）を親コンポーネント（EditRecordForm）内で定義していると、
 // 親コンポーネントが再描画される度にinputのフォーカスが外れてしまうので、外で定義する（または別ファイルで定義する）
@@ -81,7 +81,7 @@ export default function EditRecordForm({ record, onUpdateRecord = (f) => f, onRa
       <GoogleMap spaName={record.title} />
 
       {/* 浴室内図 */}
-      <CustomCanvas record={record} onUpdateRecord={onUpdateRecord} />
+      <SpaCanvas record={record} onUpdateRecord={onUpdateRecord} />
     </div>
   );
 }
